@@ -1,0 +1,36 @@
+// All colors used are here
+$background-color: #fafafa;
+$primary-btn-color: #0095f6;
+$border-color: #1b1b1b1e;
+
+// Global Styles
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: $background-color;
+}
+
+// All media queries here
+@mixin tablet {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}

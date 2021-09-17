@@ -1,0 +1,88 @@
+.post_modal__body {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Modal content with white background
+  .post_modal__content {
+    background: #fff;
+    max-width: 900px;
+    display: flex;
+    position: relative;
+
+    @include medium {
+      display: block;
+      max-width: 500px;
+    }
+
+    @include small {
+      max-width: 300px;
+    }
+  }
+
+  // close modal btn
+  .post_modal__close {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+
+    @include medium {
+      top: -20px;
+      right: -20px;
+    }
+
+    @include small {
+      top: -20px;
+      right: -30px;
+    }
+  }
+
+  // The actual post image
+  .post__img {
+    flex: 2;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // The post body
+  .post__body {
+    flex: 1;
+    padding: 1rem 1.5rem;
+
+    .post__user {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        margin-left: 10px;
+      }
+    }
+
+    .post__caption {
+      line-height: 1.6;
+      margin-top: 1rem;
+    }
+  }
+
+  .post__commentsHeading {
+    margin: 1rem 0;
+  }
+
+  // post comments
+  .post__comments {
+    height: 150px;
+    overflow-y: auto;
+  }
+}

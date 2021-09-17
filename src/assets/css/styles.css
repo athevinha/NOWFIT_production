@@ -1,0 +1,721 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #fafafa;
+}
+
+nav {
+  padding: 0.3rem;
+  background: #fff;
+  border: 1px solid transparent;
+  border-bottom-color: #1b1b1b1e;
+}
+
+nav .nav__container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav__container .nav__navlogo {
+  flex: 2;
+  font-size: large;
+  text-decoration: none;
+  background: -webkit-linear-gradient(#405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #fd1d1d, #f77737, #fcaf45, #ffdc80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav .nav__container .nav__navlogo * {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+  nav .nav__container .nav__navlogo {
+    flex: 1;
+  }
+}
+
+nav .nav__container img.insta__logo {
+  width: 15%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1000px) {
+  nav .nav__container img.insta__logo {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav .nav__container img.insta__logo {
+    width: 80%;
+  }
+}
+
+nav .nav__menu {
+  flex: 0.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  nav .nav__menu {
+    flex: 1;
+  }
+}
+
+nav .nav__menu a {
+  color: #000;
+}
+
+.avatar__menu {
+  cursor: pointer;
+  position: relative;
+}
+
+div[role="menu"] {
+  width: 200px;
+  visibility: hidden;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  transform: translate(-50%);
+  border: 1px solid #1b1b1b1e;
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+div[role="menu"] a {
+  font-size: small;
+  padding: 0.3rem;
+  text-decoration: none;
+  color: #333;
+  padding-left: 1rem;
+}
+
+div[role="menu"] a svg {
+  vertical-align: middle;
+}
+
+div[role="menu"] a:hover {
+  background-color: #1b1b1b1e;
+}
+
+div[role="menu"] a:not(:nth-child(1)) {
+  margin-top: 0.5rem;
+}
+
+div[role="menu"].visible {
+  visibility: visible;
+}
+
+.no__postError {
+  margin: 4rem 0;
+  color: #a5a5a5;
+  font-size: 2rem;
+}
+
+mark {
+  background: none;
+  color: #006eff;
+  cursor: pointer;
+}
+
+.post {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #1b1b1b1e;
+  border-radius: 3.5px;
+  max-width: 700px;
+  margin: 2rem 0;
+}
+
+.post .post__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+}
+
+.post .post__header h4 {
+  margin-left: 10px;
+  word-break: break-all;
+}
+
+.post .post__body img {
+  object-fit: cover;
+  width: 100%;
+  opacity: 0.89;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.post .post__body img:hover {
+  opacity: 1;
+}
+
+.post .post__footer,
+.post .post__comments {
+  padding: 1rem;
+}
+
+.post .post__footer .post__caption,
+.post .post__comments .post__caption {
+  display: block;
+  margin: 0.8rem 0;
+  word-break: break-all;
+}
+
+.post__comments {
+  word-break: break-all;
+}
+
+.post__comments .post__commentText {
+  margin: 0.8rem 0;
+  font-size: small;
+}
+
+.post__comments .post__userDescription {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.post__comments .post__userDescription h3 {
+  font-size: small;
+}
+
+.post__comments .post__userDescription div {
+  height: 25px;
+  width: 25px;
+  margin-right: 14px;
+}
+
+.post__commentForm {
+  width: 100%;
+  display: flex;
+  background: #eee;
+  padding: 0 0.7rem;
+}
+
+.post__commentForm .comment__box {
+  background: transparent;
+  padding: 0.7rem 0;
+  outline: none;
+  border: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+}
+
+.post__commentForm .post__commentBtn {
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.sidebar {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  position: sticky;
+  top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    position: static;
+    margin-left: 0;
+  }
+}
+
+.sidebar .sidebar__header,
+.sidebar .user {
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .user__info {
+  margin-left: 10px;
+}
+
+.sidebar .suggestions {
+  color: #a5a5a5;
+  margin: 1rem 0;
+}
+
+.sidebar .currentUser__username,
+.sidebar h5 {
+  color: #000;
+}
+
+.home__container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+  .home__container {
+    flex-direction: column-reverse;
+  }
+}
+
+.posts {
+  flex: 2;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.instagram__pageLoading {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.login__container,
+.signup__container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__container h1,
+.signup__container h1 {
+  text-align: center;
+  font-size: 1.5em;
+  background: -webkit-linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #fd1d1d, #f77737, #fcaf45, #ffdc80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login__container .form,
+.signup__container .form {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background: #fff;
+  border: 1px solid #1b1b1b1e;
+}
+
+.login__container .form__area,
+.signup__container .form__area {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .login__container .form__area,
+  .signup__container .form__area {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login__container .form__area,
+  .signup__container .form__area {
+    width: 80%;
+  }
+}
+
+.login__container .auth__error,
+.signup__container .auth__error {
+  margin: 1rem 0 0 0;
+  color: red;
+}
+
+.login__container form,
+.signup__container form,
+.section__setProfile form {
+  width: 85%;
+  margin: auto;
+}
+
+.login__container form .form__field,
+.signup__container form .form__field,
+.section__setProfile form .form__field {
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.login__container form .form__field label,
+.signup__container form .form__field label,
+.section__setProfile form .form__field label {
+  font-size: smaller;
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  color: #1b1b1b6d;
+  transition: all 0.4s;
+}
+
+.login__container form .form__field input,
+.signup__container form .form__field input,
+.section__setProfile form .form__field input {
+  width: 100%;
+  font-size: small;
+  border-radius: 0;
+  border: 1px solid #1b1b1b1e;
+  padding: 0.8rem 0.4rem 0.4rem 0.4rem;
+}
+
+.login__container form .form__field input:focus + label,
+.signup__container form .form__field input:focus + label,
+.section__setProfile form .form__field input:focus + label {
+  top: 0;
+  font-size: x-small;
+}
+
+.login__container form .form__field input:valid + label,
+.signup__container form .form__field input:valid + label,
+.section__setProfile form .form__field input:valid + label {
+  top: 0;
+  font-size: x-small;
+}
+
+.primary-insta-btn {
+  padding: 0.4rem 0;
+  background: #0095f6;
+  color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.primary-insta-btn:disabled {
+  background: #a0a0a0;
+  cursor: default;
+}
+
+.google__login {
+  margin: 2rem 0 1rem 0;
+}
+
+.btn__authGoogle {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #3b5998;
+}
+
+.btn__authGoogle svg {
+  vertical-align: middle;
+}
+
+.forgotPassword {
+  text-decoration: none;
+  color: #3b5998;
+  font-size: 12px;
+}
+
+.signup__area {
+  padding: 1.2rem 0;
+  background: #fff;
+  border: 1px solid #1b1b1b1e;
+  margin: 0.5rem 0;
+}
+
+.signup__area p {
+  color: rgba(0, 0, 0, 0.802);
+}
+
+.signup__area a {
+  text-decoration: none;
+  color: #0095f6;
+  font-weight: bold;
+}
+
+.signup__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup__container h4 {
+  color: #a5a5a5;
+  font-weight: bold;
+  margin: 0 40px 30px;
+}
+
+.signup__container .primary-insta-btn {
+  margin: 0.5rem 0;
+}
+
+.signup__container .policies {
+  text-align: center;
+  color: #a5a5a5;
+  margin: 10px 40px;
+  font-size: smaller;
+}
+
+.modal__container {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container .modal__body {
+  position: relative;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .modal__container .modal__body {
+    padding: 1.4rem;
+    border-radius: 0.7rem;
+  }
+}
+
+.modal__container .modal__body form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.modal__body form .file {
+  display: none;
+}
+
+.modal__body form .file__placeholder {
+  height: 100px;
+  width: 100%;
+  border: 5px dashed #999999;
+  color: #999999;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 500px) {
+  .modal__body form .file__placeholder {
+    height: 70px;
+  }
+}
+
+.modal__body form .file__placeholder:hover {
+  border: 5px dashed #797979;
+  color: #797979;
+}
+
+.modal__body form .file__placeholder h4 {
+  font-weight: bold;
+}
+
+.modal__body form .file__placeholder h4 svg {
+  vertical-align: middle;
+}
+
+.modal__body form .form__caption {
+  padding: 4px;
+  border-radius: 4px 12px;
+  background: #fff;
+  border: 1px solid #1b1b1b1e;
+  margin-bottom: 1rem;
+}
+
+.modal__body form .primary-insta-btn svg {
+  vertical-align: middle;
+}
+
+.progress__bar {
+  height: 5px;
+  width: 100%;
+  background: #ddd;
+  position: relative;
+  border-radius: 7px;
+  margin-top: 0.3rem;
+}
+
+.progress__bar .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #0095f6;
+  transition: all 0.4s;
+}
+
+.upload__error {
+  text-align: center;
+  color: red;
+  margin-top: 0.7em;
+}
+
+.close__uploadModal {
+  color: #333;
+  position: absolute;
+  top: 1rem;
+  right: 1.8rem;
+}
+
+.section__setProfile {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__setProfile .container {
+  background: #fff;
+  border: 1px solid #1b1b1b1e;
+  width: 30%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .section__setProfile .container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section__setProfile .container {
+    width: 80%;
+  }
+}
+
+.section__setProfile .container form {
+  margin-top: 2rem;
+}
+
+.post_modal__body {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post_modal__body .post_modal__content {
+  background: #fff;
+  max-width: 900px;
+  display: flex;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .post_modal__body .post_modal__content {
+    display: block;
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .post_modal__body .post_modal__content {
+    max-width: 300px;
+  }
+}
+
+.post_modal__body .post_modal__close {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .post_modal__body .post_modal__close {
+    top: -20px;
+    right: -20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .post_modal__body .post_modal__close {
+    top: -20px;
+    right: -30px;
+  }
+}
+
+.post_modal__body .post__img {
+  flex: 2;
+}
+
+.post_modal__body .post__img img {
+  width: 100%;
+}
+
+.post_modal__body .post__body {
+  flex: 1;
+  padding: 1rem 1.5rem;
+}
+
+.post_modal__body .post__body .post__user {
+  display: flex;
+  align-items: center;
+}
+
+.post_modal__body .post__body .post__user h3 {
+  margin-left: 10px;
+}
+
+.post_modal__body .post__body .post__caption {
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.post_modal__body .post__commentsHeading {
+  margin: 1rem 0;
+}
+
+.post_modal__body .post__comments {
+  height: 150px;
+  overflow-y: auto;
+}
+/*# sourceMappingURL=styles.css.map */

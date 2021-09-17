@@ -1,0 +1,151 @@
+.login__container,
+.signup__container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    font-size: 1.5em;
+    background: -webkit-linear-gradient(
+      135deg,
+      #405de6,
+      #5851db,
+      #833ab4,
+      #c13584,
+      #e1306c,
+      #fd1d1d,
+      #fd1d1d,
+      #f77737,
+      #fcaf45,
+      #ffdc80
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .form {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background: #fff;
+    border: 1px solid #1b1b1b1e;
+  }
+
+  .form__area {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include medium {
+      width: 60%;
+    }
+
+    @include small {
+      width: 80%;
+    }
+  }
+
+  .auth__error {
+    margin: 1rem 0 0 0;
+    color: red;
+  }
+}
+
+.login__container form,
+.signup__container form,
+.section__setProfile form {
+  width: 85%;
+  margin: auto;
+
+  .form__field {
+    margin: 0.5rem 0;
+    position: relative;
+
+    label {
+      font-size: smaller;
+      position: absolute;
+      top: 40%;
+      left: 2%;
+      color: #1b1b1b6d;
+      transition: all 0.4s;
+    }
+
+    input {
+      width: 100%;
+      font-size: small;
+      border-radius: 0;
+      border: 1px solid #1b1b1b1e;
+      padding: 0.8rem 0.4rem 0.4rem 0.4rem;
+    }
+
+    input:focus + label {
+      top: 0;
+      font-size: x-small;
+    }
+
+    input:valid + label {
+      top: 0;
+      font-size: x-small;
+    }
+  }
+}
+
+.primary-insta-btn {
+  padding: 0.4rem 0;
+  background: $primary-btn-color;
+  color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+
+  &:disabled {
+    background: rgb(160, 160, 160);
+    cursor: default;
+  }
+}
+
+.google__login {
+  margin: 2rem 0 1rem 0;
+}
+
+.btn__authGoogle {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #3b5998;
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.forgotPassword {
+  text-decoration: none;
+  color: #3b5998;
+  font-size: 12px;
+}
+
+.signup__area {
+  padding: 1.2rem 0;
+  background: #fff;
+  border: 1px solid #1b1b1b1e;
+  margin: 0.5rem 0;
+
+  p {
+    color: rgba(0, 0, 0, 0.802);
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-btn-color;
+    font-weight: bold;
+  }
+}

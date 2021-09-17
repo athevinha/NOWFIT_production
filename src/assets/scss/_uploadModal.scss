@@ -1,0 +1,109 @@
+.modal__container {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal__body {
+    @include small {
+      padding: 1.4rem;
+      border-radius: 0.7rem;
+    }
+
+    position: relative;
+    background: #fff;
+    border-radius: 2rem;
+    padding: 2rem;
+
+    form {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}
+
+.modal__body form .file {
+  display: none;
+}
+
+.modal__body form .file__placeholder {
+  @include small {
+    height: 70px;
+  }
+
+  height: 100px;
+  width: 100%;
+  border: 5px dashed rgb(153, 153, 153);
+  color: rgb(153, 153, 153);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  border-radius: 4px;
+
+  &:hover {
+    border: 5px dashed rgb(121, 121, 121);
+    color: rgb(121, 121, 121);
+  }
+
+  h4 {
+    font-weight: bold;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+
+.modal__body form {
+  .form__caption {
+    padding: 4px;
+    border-radius: 4px 12px;
+    background: #fff;
+    border: 1px solid #1b1b1b1e;
+    margin-bottom: 1rem;
+  }
+
+  .primary-insta-btn {
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+
+.progress__bar {
+  height: 5px;
+  width: 100%;
+  background: #ddd;
+  position: relative;
+  border-radius: 7px;
+  margin-top: 0.3rem;
+
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: $primary-btn-color;
+    transition: all 0.4s;
+  }
+}
+
+.upload__error {
+  text-align: center;
+  color: red;
+  margin-top: 0.7em;
+}
+
+.close__uploadModal {
+  color: #333;
+  position: absolute;
+  top: 1rem;
+  right: 1.8rem;
+}

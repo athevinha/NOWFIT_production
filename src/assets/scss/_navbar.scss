@@ -1,0 +1,115 @@
+nav {
+  padding: 0.3rem;
+  background: #fff;
+  border: 1px solid transparent;
+  border-bottom-color: #1b1b1b1e;
+
+  .nav__container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav__navlogo {
+      flex: 2;
+      font-size: large;
+      text-decoration: none;
+      background: -webkit-linear-gradient(
+        #405de6,
+        #5851db,
+        #833ab4,
+        #c13584,
+        #e1306c,
+        #fd1d1d,
+        #fd1d1d,
+        #f77737,
+        #fcaf45,
+        #ffdc80
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      & * {
+        text-decoration: none;
+      }
+
+      @include small {
+        flex: 1;
+      }
+    }
+
+    img.insta__logo {
+      width: 15%;
+      object-fit: contain;
+
+      @include tablet {
+        width: 30%;
+      }
+
+      @include small {
+        width: 80%;
+      }
+    }
+  }
+
+  .nav__menu {
+    @include small {
+      flex: 1;
+    }
+
+    flex: 0.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: #000;
+    }
+  }
+}
+
+.avatar__menu {
+  cursor: pointer;
+  position: relative;
+}
+
+div[role="menu"] {
+  width: 200px;
+  visibility: hidden;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  transform: translate(-50%);
+  border: 1px solid #1b1b1b1e;
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+  a {
+    svg {
+      vertical-align: middle;
+    }
+    font-size: small;
+    padding: 0.3rem;
+    text-decoration: none;
+    color: #333;
+    padding-left: 1rem;
+
+    &:hover {
+      background-color: #1b1b1b1e;
+    }
+
+    &:not(:nth-child(1)) {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+div[role="menu"].visible {
+  visibility: visible;
+}
