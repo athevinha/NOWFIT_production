@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import HomeSharpIcon from "@material-ui/icons/HomeSharp";
-import SearchIcon from '@material-ui/icons/Search';
+// import SearchIcon from '@material-ui/icons/Search';
+import FilterIcon from '@material-ui/icons/Filter';
 import Avatar from "@material-ui/core/Avatar";
 import AddIcon from "@material-ui/icons/Add";
 import { Context } from "../Context/GlobalState";
@@ -48,7 +49,7 @@ export default function Navbar() {
             <AddIcon />
           </Link>
           <Link to="/search">
-            <SearchIcon />
+            <FilterIcon />
           </Link>
           {open && <UploadModal open={open} handleClose={handleClose} />}
           <div className="avatar__menu">

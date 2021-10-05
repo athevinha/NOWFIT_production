@@ -266,7 +266,7 @@ mark {
 }
 
 .home__container {
-  width: 70%;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -719,3 +719,4 @@ mark {
   overflow-y: auto;
 }
 /*# sourceMappingURL=styles.css.map */
+

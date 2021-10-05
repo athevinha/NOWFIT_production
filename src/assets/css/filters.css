@@ -1,0 +1,89 @@
+.masonry .grid {
+	display: inline-block;
+	margin-bottom: 16px;
+	position: relative;
+    width: 100%;
+}
+
+.masonry .grid:before {
+	border-radius: 5px;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.masonry .grid img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.masonry .grid_title {
+	font-size: 1.75rem;
+	font-weight: bold;
+	margin: 0px 0px 10px 0px;
+}
+
+.masonry .grid_author {
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+
+.masonry .grid_link {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.masonry .grid_body {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 30px 30px;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	font-family: "Apple Chancery", cursive;
+}
+
+.masonry .grid_tag {
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #333;
+	border-radius: 5px;
+	padding: 5px 15px;
+	margin-bottom: 5px;
+}
+
+.mt-auto {
+	margin-top: auto;
+}
+
+.masonry {
+	columns: 5;
+	column-gap: 16px;
+}
+
+@media (max-width: 1200px) {
+	.masonry {
+		columns: 4;
+	}
+}
+
+@media (max-width: 992px) {
+	.masonry {
+		columns: 3;
+	}
+}
+
+@media (max-width: 532px) {
+	.masonry {
+		columns: 2;
+	}
+}

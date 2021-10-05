@@ -46,15 +46,15 @@ export default function Post({ post }) {
   };
 
   return (
-    <div className="post">
-      <div className="post__header">
+    <div className="grid">
+      {/* <div className="post__header">
         <Avatar alt={post.user.fullName} src={post.user.photoURL} />
         <h4>{post.user.username}</h4>
-      </div>
+      </div> */}
       <div className="post__body" onClick={() => setIsModal(true)}>
         <img src={post.url} alt="Post" title="Click to view in full screen" />
       </div>
-      <div className="post__footer">
+      {/* <div className="post__footer">
         <p className="post__caption">
           <Hashtags>{post.caption}</Hashtags>
         </p>
@@ -78,7 +78,7 @@ export default function Post({ post }) {
       </form>
       {isModal && (
         <PostModal post={post} isModal={isModal} setIsModal={setIsModal} />
-      )}
+      )} */}
     </div>
   );
 }

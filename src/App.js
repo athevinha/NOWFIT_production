@@ -6,7 +6,7 @@ import SetProfile from "./components/SetProfile";
 import { PrivateRoute } from "./PrivateRoute";
 import "./assets/css/styles.css";
 import { useEffect } from "react";
-import Search from "./components/search/Main";
+// import Search from "./components/search/Main";
 import Navbar from "./components/Navbar";
 export default function App() {
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function App() {
       <Switch>
         <Route path="/" component={Login} exact />
         <Route path="/signup" component={Signup} />
-        <Route path="/search" component={Search} />
+        {/* <Route path="/search" component={Search} /> */}
         <PrivateRoute path="/home" component={Home} />
         <PrivateRoute path="/set-profile" component={SetProfile} />
       </Switch>
