@@ -46,7 +46,7 @@ export default function Post({ post }) {
   };
 
   return (
-    <div className="grid">
+    <div className="grid" onClick={() => setIsModal(true)}>
       {/* <div className="post__header">
         <Avatar alt={post.user.fullName} src={post.user.photoURL} />
         <h4>{post.user.username}</h4>
@@ -76,9 +76,10 @@ export default function Post({ post }) {
           <SendIcon />
         </button>
       </form>
+      */}
       {isModal && (
         <PostModal post={post} isModal={isModal} setIsModal={setIsModal} />
-      )} */}
+      )} 
     </div>
   );
 }

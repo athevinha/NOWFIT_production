@@ -58,10 +58,20 @@ export default function UploadModal({ open, handleClose }) {
           setFile(null);
           setCaption("");
 
+          let hashtags = {
+          age: "17",
+          color: "black",
+          content: "history",
+          height: "180",
+          size: "xl",
+          trademark: "midas",
+          type: "clothers",
+          }
           // Adding to the database (post collection)
           db.collection("posts").add({
             url,
             caption,
+            hashtags,
             user: {
               fullName: user.fullName,
               photoURL: user.photoURL,
@@ -74,6 +84,7 @@ export default function UploadModal({ open, handleClose }) {
           db.collection("users").doc(user.id).collection("my_posts").add({
             url,
             caption,
+            hashtags,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           });
         }
