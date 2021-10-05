@@ -33,16 +33,16 @@ export default function Posts() {
       let Nfilters = [];
       if (filters[filter] !== "") {
         console.log(filters[filter]);
-
-        filter_test.map((post, idP) => {
-          // console.log(post.hashtags[filter])
-          // console.log(filters[filter])
-          if (post.hashtags[filter].includes(filters[filter].toLowerCase())) {
-            Nfilters.push(post);
-          }
-          filter_test = Nfilters;
-        });
-        console.log(filter_test);
+        filter_test =  filter_test.filter((post,idP) => post.hashtags[filter].includes(filters[filter].toLowerCase()))
+        // filter_test.map((post, idP) => {
+        //   // console.log(post.hashtags[filter])
+        //   // console.log(filters[filter])
+        //   if (post.hashtags[filter].includes(filters[filter].toLowerCase())) {
+        //     Nfilters.push(post);
+        //   }
+        //   filter_test = Nfilters;
+        // });
+        // console.log(filter_test);
       }
 
       setPostsFilter(filter_test);
